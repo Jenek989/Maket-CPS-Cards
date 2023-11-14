@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Bold.woff') format('woff'),
+        url('fonts/TTLakes-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Medium.woff') format('woff'),
+        url('fonts/TTLakes-Medium.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.section-wrapper {
+    min-width: 320px;
+    background-color: #F8F8F8;
+    margin: 0 auto;
+    padding-right: 0;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #7E7E82;
+}
+
+.brand-swiper__title {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+    padding: 16px;
+}
+
+.swiper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: 154px;
+}
+
+
+.swiper-wrapper {
+    display: flex;
+    margin: 16px;
+    /*gap: 16px;*/
+}
+
+.swiper-slide {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-width: 240px;
+    height: 72px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+.swiper-slide__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide__link::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 16px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    background: url("img/arrow_right.svg") no-repeat 52% 50%;
+}
+
+.swiper-slide__wrapper {
+    display: flex;
+    margin-left: 16px;
+    width: 128px;
+}
+
+.brand-swiper__button {
+    display: block;
+    position: absolute;
+    color: #1B1C21;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 24px;
+    padding-left: 30px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.brand-swiper__button::before {
+    content: "";
+    position: absolute;
+    background: url(img/arrow.svg) no-repeat 50% 50%;
+    width: 24px;
+    height: 24px;
+    left: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1015px) {
+
+    .section-wrapper {
+        min-width: 768px;
+        height: auto;
+    }
+
+    .brand-swiper {
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .brand-swiper__title {
+        height: 56px;
+        padding-left: 24px;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+        height: 150px;
+        width: inherit;
+        padding: 24px;
+        margin: 0;
+        overflow-y: hidden;
+        transition: height 0.3s;
+    }
+
+    .swiper-wrapper::after {
+        content: "";
+        position: relative;
+        width: 224px;
+        min-width: 224px;
+        height: 72px;
+        flex-grow: 1;
+    }
+
+    .swiper-wrapper.hidden {
+        overflow-y: visible;
+        transition: height 0.3s;
+        height: 335px;
+    }
+
+    .swiper-slide {
+        width: 224px;
+        min-width: 224px;
+        flex-grow: 1;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .brand-swiper__button {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1015px) and (max-width: 1120px) {
+
+    .brand-swiper {
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .brand-swiper__title {
+        height: 56px;
+        padding-left: 24px;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+        height: 150px;
+        width: inherit;
+        padding: 24px;
+        margin: 0;
+        overflow-y: hidden;
+        transition: height 0.3s;
+    }
+
+    .swiper-wrapper::after {
+        content: "";
+        position: relative;
+        width: 224px;
+        min-width: 224px;
+        height: 72px;
+        flex-grow: 1;
+    }
+
+    .swiper-wrapper.hidden {
+        overflow-y: visible;
+        height: 245px;
+        transition: height 0.3s;
+    }
+
+    .swiper-slide {
+        width: 224px;
+        min-width: 224px;
+        flex-grow: 1;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .brand-swiper__button {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .section-wrapper {
+        width: 1120px;
+        box-sizing: border-box;
+    }
+
+    .brand-swiper {
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .brand-swiper__title {
+        width: 1120px;
+        height: 56px;
+        padding-left: 32px;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        width: 240px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        column-gap: 32px;
+        row-gap: 16px;
+        justify-content: flex-start;
+        height: 150px;
+        width: inherit;
+        padding: 24px 32px;
+        margin: 0;
+        overflow-y: hidden;
+        transition: height 0.3s;
+    }
+
+    .swiper-wrapper.hidden {
+        overflow-y: visible;
+        height: 245px;
+        transition: height 0.3s;
+    }
+
+    .brand-swiper__button {
+        display: block;
+        margin-left: 32px;
+        margin-top: 10px;
+    }
+}
