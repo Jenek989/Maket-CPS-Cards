@@ -70,6 +70,7 @@ h1 {
     box-sizing: border-box;
     background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
     padding: 16px;
+    text-transform: uppercase;
 }
 
 .swiper {
@@ -156,6 +157,10 @@ h1 {
     left: 0;
 }
 
+.brand-swiper__button.button--open::before {
+    transform: rotate(180deg);
+}
+
 @media (min-width: 768px) and (max-width: 1015px) {
 
     .section-wrapper {
@@ -217,6 +222,10 @@ h1 {
     .brand-swiper__button {
         display: block;
         cursor: pointer;
+    }
+
+    .button--open::before {
+        transform: rotate(180deg);
     }
 }
 
